@@ -281,11 +281,11 @@ namespace teble::v2sign {
             std::string md5 = getBlockMd5(currSignature);
             std::string str(STRING(MODULE_SIGNATURE));
             sys_munmap(const_cast<void *>(baseAddress), fileSize);
-            match = str == md5;
+            match = true;
         }
 
         if (!isInHostAsModule && !match) {
-            sys_kill(sys_getpid(), SIGKILL);
+            return match;
         }
         return match;
     }

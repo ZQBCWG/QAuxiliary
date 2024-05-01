@@ -68,7 +68,7 @@ jobs:
           echo 'org.gradle.vfs.watch=true' >> gradle.properties
           sed -i 's/org.gradle.configuration-cache=true//g' gradle.properties
           echo 'buildCache { local { removeUnusedEntriesAfterDays = 1 } }' >> settings.gradle.kts
-          echo ${{ secrets.SIGN_KEYSTORE_BASE64 }} | base64 -d > keystore.jks
+          echo "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" | base64 -d > keystore.jks
           ./gradlew :app:synthesizeDistReleaseApksCI :app:extractReleaseNativeDebugMetadata
           ccache -s
           echo "APK_FILE_ARM32=$(find app/build/outputs/ci -name '*arm32.apk')" >> $GITHUB_ENV
@@ -78,9 +78,9 @@ jobs:
           echo "SYMBOL_FILE=app/build/intermediates/native_debug_metadata/release/extractReleaseNativeDebugMetadata/out" >> $GITHUB_ENV
         env:
           KEYSTORE_PATH: "../keystore.jks"
-          KEYSTORE_PASSWORD: ${{ secrets.SIGN_KEYSTORE_PASSWORD }}
-          KEY_ALIAS: ${{ secrets.SIGN_ALIAS }}
-          KEY_PASSWORD: ${{ secrets.SIGN_KEY_PASSWORD }}
+          KEYSTORE_PASSWORD: "testkey"
+          KEY_ALIAS: "testkey"
+          KEY_PASSWORD: "testkey"
 
       - name: Show Artifacts SHA256
         run: |
@@ -122,102 +122,4 @@ jobs:
           path: ${{ env.SYMBOL_FILE }}
           name: QAuxiliary-release-${{ github.event.head_commit.id }}-symbol
 
-  upload-telegram:
-    name: Upload Release
-    if: ${{ success() && github.ref == 'refs/heads/main' }}
-    runs-on: ubuntu-latest
-    needs:
-      - build
-      - telegram-bot-api
-    steps:
-      - name: Download Artifacts
-        uses: actions/download-artifact@v4
-        with:
-          path: artifacts
-      - name: Download Telegram Bot API Binary
-        uses: actions/download-artifact@v4
-        with:
-          name: telegram-bot-api-binary
-          path: .
-      - name: Release
-        env:
-          COMMIT_MESSAGE: |+
-            New push to GitHub\!
-            ```
-            ${{ github.event.head_commit.message }}
-            ```by `${{ github.event.head_commit.author.name }}`
-            See commit detail [here](${{ github.event.head_commit.url }})
-          COMMIT_URL: ${{ github.event.head_commit.url }}
-        run: |
-          ESCAPED=`python3 -c 'import json,os,urllib.parse; msg = json.dumps(os.environ["COMMIT_MESSAGE"]); print(urllib.parse.quote(msg if len(msg) <= 1024 else json.dumps(os.environ["COMMIT_URL"])))'`
-          export arm32=$(find artifacts -name "*arm32.apk")
-          export arm64=$(find artifacts -name "*arm64.apk")
-          export armAll=$(find artifacts -name "*armAll.apk")
-          export universal=$(find artifacts -name "*universal.apk")
-          export SYMBOL_ZIP_NAME=$(echo $universal | sed 's/universal.apk/symbol.zip/')
-          find artifacts -name "*.so.dbg" -print | zip "$SYMBOL_ZIP_NAME" -@
-          chmod +x telegram-bot-api-binary
-          ./telegram-bot-api-binary --api-id=21724 --api-hash=3e0cb5efcd52300aec5994fdfc5bdc16 --local 2>&1 > /dev/null &
-          curl -v "http://127.0.0.1:8081/bot${{ secrets.TELEGRAM_TOKEN  }}/sendMediaGroup?chat_id=-1001732413298&media=%5B%7B%22type%22%3A%22document%22%2C%20%22media%22%3A%22attach%3A%2F%2Farm64%22%7D%2C%7B%22type%22%3A%22document%22%2C%20%22media%22%3A%22attach%3A%2F%2Farm32%22%7D%2C%7B%22type%22%3A%22document%22%2C%20%22media%22%3A%22attach%3A%2F%2FarmAll%22%7D%2C%7B%22type%22%3A%22document%22%2C%20%22media%22%3A%22attach%3A%2F%2Funiversal%22%7D%2C%7B%22type%22%3A%22document%22%2C%20%22media%22%3A%22attach%3A%2F%2Fsymbol%22%2C%22parse_mode%22%3A%22MarkdownV2%22%2C%22caption%22:${ESCAPED}%7D%5D" \
-           -F arm32="@$arm32" \
-           -F arm64="@$arm64" \
-           -F armAll="@$armAll" \
-           -F universal="@$universal" \
-           -F symbol="@$SYMBOL_ZIP_NAME"
-          pkill telegram-bot
-
-  upload-taichi:
-    name: Upload TaiChi
-    if: ${{ success() && github.ref == 'refs/heads/main' }}
-    runs-on: ubuntu-latest
-    needs:
-      - build
-    steps:
-      - name: Download Artifacts
-        uses: actions/download-artifact@v4
-        with:
-          path: artifacts
-      - name: Release
-        run: |
-          curl "https://gist.githubusercontent.com/qwq233/2a903f28a38d48d57731a1e4d6358948/raw/80e515d659a6f3c4737a1674f50fae5087e1f83c/taichi.py" -o taichi.py
-          sudo apt install -y python3-pip
-          pip3 install requests
-          echo ${{ secrets.TC_UPLOAD_USER_TOKEN }} | base64 -d > taichi.json
-          export release=$(find $OUTPUT -name "*armAll.apk")
-          python3 taichi.py $release
-
-  telegram-bot-api:
-    name: Telegram Bot API
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@0ad4b8fadaa221de15dcec353f45205ec38ea70b # v4.1.4
-      - name: Clone Telegram Bot API
-        run: |
-          git clone --recursive https://github.com/tdlib/telegram-bot-api.git
-          git status telegram-bot-api >> telegram-bot-api-status
-      - name: Cache Bot API Binary
-        id: cache-bot-api
-        uses: actions/cache@v4.0.2
-        with:
-          path: telegram-bot-api-binary
-          key: CI-telegram-bot-api-${{ hashFiles('telegram-bot-api-status') }}
-      - name: Compile Telegram Bot API
-        if: steps.cache-bot-api.outputs.cache-hit != 'true'
-        run: |
-          sudo apt-get update
-          sudo apt-get install make git zlib1g-dev libssl-dev gperf cmake g++
-          cd telegram-bot-api
-          rm -rf build
-          mkdir build
-          cd build
-          cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX:PATH=.. ..
-          cmake --build . --target install -j$(nproc)
-          cd ../..
-          ls -l telegram-bot-api/bin/telegram-bot-api*
-          cp telegram-bot-api/bin/telegram-bot-api telegram-bot-api-binary
-      - name: Upload Binary
-        uses: actions/upload-artifact@v4
-        with:
-          name: telegram-bot-api-binary
-          path: telegram-bot-api-binary
+  
